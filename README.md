@@ -12,6 +12,7 @@ You must have the following software installed:
 - Install kind  - for mac "brew install kind"
 - Install kubectl - for mac "brew install kubectl"
 - Download Install istio - this was tested against istio 1.23 (https://github.com/istio/istio/releases/tag/1.23.1) - require istioctl tool is on your $PATH
+- Install gettext - for mac "brew install gettext" (installs the envsubst cli tool)
 
 # To run
 

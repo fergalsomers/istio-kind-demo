@@ -2,12 +2,7 @@
 
 set -x
 
-
 # Pre-requisites (see readme)
-# 1. Install kind  - for mac "brew install kind"
-# 2. Install kubectl - for mac "brew install kubectl"
-# 3. Install istio - this was tested against istio 1.23 (https://github.com/istio/istio/releases/tag/1.23.1)
-
 
 # Define some istio ports (k8 container port and K8 nodePort - note we expose the nodeports as hostports in Kind)
 # This will allow you to access the ingress gateway via port 8080 (e.g. http://localhost:8080/productpage )
