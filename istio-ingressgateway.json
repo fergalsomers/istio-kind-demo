@@ -1,0 +1,67 @@
+{
+  "apiVersion": "v1",
+  "kind": "Service",
+  "metadata": {
+    "creationTimestamp": "2024-09-10T18:48:18Z",
+    "labels": {
+      "app": "istio-ingressgateway",
+      "install.operator.istio.io/owning-resource": "installed-state",
+      "install.operator.istio.io/owning-resource-namespace": "istio-system",
+      "istio": "ingressgateway",
+      "istio.io/rev": "default",
+      "operator.istio.io/component": "IngressGateways",
+      "operator.istio.io/managed": "Reconcile",
+      "operator.istio.io/version": "1.23.0",
+      "release": "istio"
+    },
+    "name": "istio-ingressgateway",
+    "namespace": "istio-system",
+    "resourceVersion": "629",
+    "uid": "adae5564-2c47-49cd-81e7-e359f301dc69"
+  },
+  "spec": {
+    "allocateLoadBalancerNodePorts": true,
+    "clusterIP": "10.96.110.132",
+    "clusterIPs": [
+      "10.96.110.132"
+    ],
+    "externalTrafficPolicy": "Cluster",
+    "internalTrafficPolicy": "Cluster",
+    "ipFamilies": [
+      "IPv4"
+    ],
+    "ipFamilyPolicy": "SingleStack",
+    "ports": [
+      {
+        "name": "status-port",
+        "nodePort": 32595,
+        "port": 15021,
+        "protocol": "TCP",
+        "targetPort": 15021
+      },
+      {
+        "name": "http2",
+        "nodePort": 31002,
+        "port": 80,
+        "protocol": "TCP",
+        "targetPort": 8080
+      },
+      {
+        "name": "https",
+        "nodePort": 30698,
+        "port": 443,
+        "protocol": "TCP",
+        "targetPort": 8443
+      }
+    ],
+    "selector": {
+      "app": "istio-ingressgateway",
+      "istio": "ingressgateway"
+    },
+    "sessionAffinity": "None",
+    "type": "LoadBalancer"
+  },
+  "status": {
+    "loadBalancer": {}
+  }
+}
